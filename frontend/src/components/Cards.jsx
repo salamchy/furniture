@@ -23,7 +23,7 @@ const Cards = () => {
   ]
 
   return (
-    <div className="max-w-6xl mx-auto  py-5">
+    <div className="max-w-8xl mx-5 md:mx-10  lg:mx-30   py-5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {cards.map((card) => (
           <div key={card.id} className="bg-white  overflow-hidden">
