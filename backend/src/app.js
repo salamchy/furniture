@@ -22,12 +22,16 @@ app.use(cookieParser())
 
 //router import
 import userRouter from './routes/user.routes.js'
-// import productRouter from './routes/products.routes.js'
+import productRouter from './routes/product.routes.js'
+import bannerImgRouter from './routes/bannerImg.routes.js'
+import blogsRouter from './routes/blog.routes.js'
 // import reviewRouter from './routes/reviews.routes.js'
 
 //router declaration
 app.use('/api/v1/users', userRouter)
-// app.use('/api/v1/products', productRouter)
+app.use('/api/v1/products', productRouter)
+app.use('/api/v1/bannerImg', bannerImgRouter)
+app.use('/api/v1/blogs', blogsRouter)
 // app.use('/api/v1/reviews', reviewRouter)
 
 // Global error handler

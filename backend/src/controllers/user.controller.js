@@ -80,22 +80,25 @@ export const loginUser = async (req, res) => {
     // Respond with the token and user details
     res.cookie('authToken', token, {
       httpOnly: true,
-      secure: true, //development
+      secure: false, // set to false for local development
       sameSite: 'strict', //prevent from CSRF
       maxAge: 60 * 60 * 1000, //1hour
     })
+
+    // Prepare user data to send in response
+    const userData = {
+      _id: userExist._id,
+      email: userExist.email,
+      username: userExist.username,
+      role: userExist.role,
+    }
 
     // Respond with a success message and the generated token
     return res.status(200).json({
       success: true,
       message: 'Login Successfully!!!',
       token,
-      userExist: {
-        _id: userExist._id,
-        email: userExist.email,
-        username: userExist.username,
-        role: userExist.role,
-      },
+      user: userData,
     })
   } catch (error) {
     console.log(error) // Log the error for debugging
@@ -109,7 +112,7 @@ export const logoutUser = async (req, res) => {
     // Clear the auth cookie
     res.clearCookie('authToken', {
       httpOnly: true,
-      secure: true, // set false in local dev if not using https
+      secure: false, // set false in local dev if not using https
       sameSite: 'strict',
     })
 
