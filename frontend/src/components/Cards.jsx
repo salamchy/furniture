@@ -1,22 +1,25 @@
 import React from 'react'
+import Port from '../assets/Rectangle6.png'
+import Lamp from '../assets/Rectangle7.png'
+import Chair from '../assets/Rectangle5.png'
 
 const Cards = () => {
   const cards = [
     {
       id: 1,
-      image: 'https://picsum.photos/id/1015/400/300',
+      image: Port,
       title: 'Port',
       price: 5,
     },
     {
       id: 2,
-      image: 'https://picsum.photos/id/1016/400/300',
+      image: Lamp,
       title: 'Lamp',
       price: 10,
     },
     {
       id: 3,
-      image: 'https://picsum.photos/id/1018/400/300',
+      image: Chair,
       title: 'Chair',
       price: 15,
     },

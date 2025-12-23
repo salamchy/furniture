@@ -8,7 +8,7 @@ const Layout = () => {
     <>
       <Navbar />
       <main className="min-h-[calc(100vh-200px)]">
-        <Outlet /> {/* This will render the page content */}
+        <Outlet />
       </main>
       <Footer />
     </>
