@@ -80,8 +80,9 @@ export const loginUser = async (req, res) => {
     // Respond with the token and user details
     res.cookie('authToken', token, {
       httpOnly: true,
-      secure: false, // set to false for local development
-      sameSite: 'strict', //prevent from CSRF
+      secure: process.env.NODE_ENV === 'production', // true in production
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', // 'none' for cross-site
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
       maxAge: 60 * 60 * 1000, //1hour
     })
 
