@@ -3,7 +3,7 @@ import { authApi } from '../features/auth/authApi.js'
 import authReducer from '../features/auth/authSlice.js'
 import { productApi } from '../features/product/ProductApi.js'
 import { bannerImgApi } from '../features/bannerImg/BannerImgApi.js'
-import { blogsApi } from '../features/blogs/blogsApi.js'
+import { blogsApi } from '../features/blogs/BlogsApi.js'
 import cartReducer from '../features/cart/cartSlice.js'
 
 export const store = configureStore({
