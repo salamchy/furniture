@@ -24,4 +24,4 @@ const bannerSchema = new mongoose.Schema(
   }
 )
 
-export const BannerModel = mongoose.model('Carousel', bannerSchema)
+export const BannerModel = mongoose.model('BannerModel', bannerSchema)
