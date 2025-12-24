@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { useGetProductsQuery } from '../features/product/productApi'
+import { useGetProductsQuery } from '../features/product/ProductApi.js'
 import { addToCart, selectCartItemById } from '../features/cart/cartSlice'
 import {
   FaSpinner,
