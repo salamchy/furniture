@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useGetProductByIdQuery } from '../features/product/productApi'
+import { useGetProductByIdQuery } from '../features/product/ProductApi.js'
 import {
   FaSpinner,
   FaArrowLeft,
