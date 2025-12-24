@@ -4,7 +4,7 @@ import {
   useAddProductMutation,
   useEditProductMutation,
   useDeleteProductMutation,
-} from '../../features/product/productApi'
+} from '../../features/product/ProductApi.js'
 import {
   FaPlus,
   FaEdit,
