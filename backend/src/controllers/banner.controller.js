@@ -1,4 +1,4 @@
-import { BannerModel } from '../models/Banner.model.js'
+import { BannerModel } from '../models/banner.model.js'
 import cloudinary from '../config/cloudinary.js'
 
 //----------------add banner image------------------
