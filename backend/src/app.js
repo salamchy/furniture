@@ -7,11 +7,9 @@ const app = express()
 
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN
-      ? process.env.CORS_ORIGIN.split(',')
-      : ['furniture-ri8t.vercel.app'],
+    origin: ['http://localhost:5173', 'https://furniture-ri8t.vercel.app'],
     credentials: true,
-    optionsSuccessStatus: 200,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   })
 )
 
